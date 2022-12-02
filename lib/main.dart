@@ -48,26 +48,32 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int p = 1;
+//   int p = 1;
   var lst = [];
   void _incrementCounter() {
     setState(() {
-      int i = 1;
-      int j;
-      p++;
-      for(j=p;j<100;j++){
-        int count = 0;
-        for(i;i<j;i++){
-          if(j%i == 0){
-            count++;
-          }
+//       int i = 1;
+//       int j;
+//       p++;
+//       for(j=p;j<100;j++){
+//         int count = 0;
+//         for(i;i<j;i++){
+//           if(j%i == 0){
+//             count++;
+//           }
+//         }
+//         if(count == 1){
+//           lst.add(j);
+//           p = j;
+//         }
+//       }
+        if (count == 2 || count == 3 || count == 5 || count == 7) {
+          lst.add(count);
         }
-        if(count == 1){
-          lst.add(j);
-          p = j;
+        if (count % 2 != 0 && count % 3 != 0 && count % 5 != 0 && count % 7 != 0) {
+          lst.add(count);
         }
-      }
-
+        count++;
 
     });
   }
